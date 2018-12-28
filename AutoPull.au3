@@ -4,7 +4,7 @@
 #AutoIt3Wrapper_Outfile_x64=AutoPull_AMD64.Exe
 #AutoIt3Wrapper_Compile_Both=y
 #AutoIt3Wrapper_UseX64=y
-#AutoIt3Wrapper_Res_Fileversion=0.1.0.1
+#AutoIt3Wrapper_Res_Fileversion=0.1.1.1
 #AutoIt3Wrapper_Res_Fileversion_AutoIncrement=y
 #AutoIt3Wrapper_Res_ProductName=AutoPull
 #AutoIt3Wrapper_Res_ProductVersion=0.1
@@ -26,7 +26,7 @@ $repos = __getArray()
 $folders = __getArray()
 $user = ""
 For $line In $lines
-	If StringMid($line, 1, 1) = "-" Or StringMid($line, 2, 1) = "-" Then ContinueLoop
+	If StringMid($line, 1, 1) = "-" Or StringMid($line, 2, 1) = "-" Or $line = "" Then ContinueLoop
 	If StringMid($line, 1, 1) = @TAB Then
 		$repos = __add($repos, $url & $user & "/" & StringTrimLeft($line, 1))
 		$folders = __add($folders, StringTrimLeft($line, 1))

@@ -1,0 +1,7 @@
+BorjaLive
+	VHDLME
+	ETSIcode
+	cdrawer
+	AutoPertCoste
+-gmqdev
+	-ahorcado_java
